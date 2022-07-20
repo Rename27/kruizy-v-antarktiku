@@ -1,0 +1,139 @@
+.nav__toggle-button {
+  display: none;
+
+  @include vp-767 {
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    display: block;
+    width: 24px;
+    height: 12px;
+    background-color: transparent;
+    border: 0;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    z-index: 1;
+
+    &--is-open {
+      &::before,
+      &::after {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background-color: $color-default-black;
+        transform: rotate(45deg);
+        content: "";
+      }
+
+      &::after {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &--is-close {
+      &::before,
+      &::after {
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background-color: $color-default-white;
+        content: "";
+      }
+
+      &::after {
+        top: 12px;
+        box-shadow: 0 -6px 0 $color-default-white;
+      }
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 33px;
+  margin: 0;
+  padding: 0;
+  max-width: 595px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 10px 23px;
+    max-width: 510px;
+  }
+
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    left: 35px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 75px 30px 0 15px;
+    max-width: initial;
+    height: 568px;
+    background-color: $color-default-white;
+
+    &--js-none,
+    &--is-open {
+      position: absolute;
+      top: 0;
+      left: 35px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 75px 30px 0 15px;
+      max-width: initial;
+      height: 568px;
+      background-color: $color-default-white;
+    }
+
+    &--is-close {
+      display: none;
+    }
+  }
+}
+
+.nav__logo {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.nav__logo svg {
+  fill: $color-default-black;
+
+  @include vp-767 {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    display: block;
+    z-index: 1;
+  }
+}
+
+.nav__link {
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-default-black;
+    word-break: break-word;
+  }
+}

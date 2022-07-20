@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,30 +14,34 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="page__body">
   <header class="header container">
-    <div class="header__logo">
-      <a href="index.html">
-        <img src="img/svg/identic.svg" alt="Логотип сайта Круизы в Антарктику" width="70" height="38">
-      </a>
-    </div>
-    <nav class="header__nav">
-      <img src="img/svg/identic.svg" alt="Логотип сайта Круизы в Антарктику">
-      <div>
-        <button type="button"><span class="visually-hidden">Открыть меню</span></button>
-      </div>
-      <ul>
-        <a href="#">
-          <li>Преимущества</li>
+    <a class="header__logo logo" href="index.html">
+      <svg width="70" height="38">
+        <use xlink:href="img/sprite_auto.svg#identic"></use>
+      </svg>
+    </a>
+    <nav class="header__nav nav">
+      <button class="nav__toggle-button nav__toggle-button--is-close" type="button"><span
+          class="visually-hidden">Открыть
+          меню</span></button>
+      <ul class="nav__list nav__list--is-close nav__list--jsnone">
+        <a class="nav__logo" href="index.html">
+          <svg width="42" height="22">
+            <use xlink:href="img/sprite_auto.svg#identic"></use>
+          </svg>
         </a>
-        <a href="#">
-          <li>Направления</li>
+        <a class="nav__link" href="#">
+          <li class="nav__item">Преимущества</li>
         </a>
-        <a href="#">
-          <li>Ближайшие круизы</li>
+        <a class="nav__link" href="#">
+          <li class="nav__item">Направления</li>
         </a>
-        <a href="#">
-          <li>Контакты</li>
+        <a class="nav__link" href="#">
+          <li class="nav__item">Ближайшие круизы</li>
+        </a>
+        <a class="nav__link" href="#">
+          <li class="nav__item">Контакты</li>
         </a>
       </ul>
     </nav>
