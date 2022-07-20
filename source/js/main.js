@@ -1,5 +1,6 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { navToggle } from './modules/modals/nav-toggle';
 
 // ---------------------------------
 
@@ -18,7 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
   });
+
+  navToggle();
+
 });
+
 
 // ---------------------------------
 
