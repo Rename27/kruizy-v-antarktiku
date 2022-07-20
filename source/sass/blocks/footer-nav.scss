@@ -1,0 +1,30 @@
+.footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 33px;
+  margin: 0;
+  padding: 0;
+  max-width: 595px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 10px 23px;
+    max-width: 510px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 23px 10px;
+  }
+}
+
+.footer-nav__link {
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
