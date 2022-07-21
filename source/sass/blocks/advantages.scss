@@ -1,0 +1,65 @@
+.advantages {
+  background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../../img/icebergs-advantages.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+.advantages h1 {
+  margin: 0 0 60px;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.advantages__card ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: none;
+  }
+}
+
+.advantages__card li {
+  padding: 30px;
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 30px 15px 25px 20px;
+  }
+
+  @include vp-767 {
+    padding: 25px 15px 25px 20px;
+  }
+}
+
+.advantages__card svg {
+  margin: 0 0 25px;
+}
+
+.advantages__card h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+
+  @include vp-1023 {
+    line-height: 25px;
+  }
+}
+
+.advantages__card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
