@@ -58,6 +58,14 @@
   visibility: visible;
 }
 
+.cruises__card li:hover h3 {
+  grid-column: 1/1;
+  align-self: flex-start;
+  padding: 35px 25px;
+  grid-row: 1/1;
+  z-index: 1;
+}
+
 .cruises__card img {
   grid-column: 1/-1;
   grid-row: 1/-1;
@@ -75,7 +83,7 @@
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   grid-column: 1/-1;
   grid-row: 1/-1;
   padding: 34px 25px;
@@ -83,10 +91,14 @@
 }
 
 .cruises__card h3 {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
   margin: 0;
+  padding: 35px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
+  align-self: flex-end;
 }
 
 .cruises__card dl {
