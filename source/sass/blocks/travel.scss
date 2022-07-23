@@ -19,6 +19,11 @@
   }
 }
 
+.travel img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .travel h2 {
   margin: 66px 0 40px;
   font-size: 28px;
