@@ -242,8 +242,50 @@
                 <a href="#">Забронировать</a>
               </div>
             </li>
-
           </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main__booking booking">
+      <div class="container">
+        <div class="booking__wrapper">
+          <div class="booking__title">
+            <h1>Раннее бронирование</h1>
+            <p>Забронируйте тур <br> за 3-6 месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
+          </div>
+          <form class="booking__form" action="https://echo.htmlacademy.ru" method="get">
+            <h2>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в ближайшее время</h2>
+            <ul>
+              <li>
+                <label>
+                  <span class="visually-hidden">Имя</span>
+                  <input type="text" name="name" placeholder="Имя" autocomplete="off" required>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <span class="visually-hidden">Телефон</span>
+                  <input type="tel" name="tel" placeholder="Телефон"
+                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" autocomplete="off" required>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <span class="visually-hidden">Электронная почта</span>
+                  <input type="email" name="email" placeholder="Email" autocomplete="off">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="personal-data" required>
+                  <span>Я согласен на обработку моих&nbsp;персональных данных</span>
+                </label>
+              </li>
+              <li>
+                <button type="submit">Оставить заявку</button>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
     </section>
