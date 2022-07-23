@@ -1,0 +1,129 @@
+.cruises {
+  padding: 120px 0;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 65px 0;
+  }
+}
+
+.cruises h1 {
+  margin: 0 0 60px;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+  text-align: center;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 40px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.cruises__card ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 260px);
+  justify-content: space-around;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(auto-fill, 309px);
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(auto-fill, 270px);
+  }
+}
+
+.cruises__card li {
+  display: grid;
+  width: fit-content;
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+}
+
+.cruises__card li:hover .cruises__card-wrapper {
+  visibility: visible;
+}
+
+.cruises__card li:hover h3 {
+  grid-column: 1/1;
+  align-self: flex-start;
+  padding: 35px 25px;
+  grid-row: 1/1;
+  z-index: 1;
+}
+
+.cruises__card img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+
+  @include vp-1023 {
+    width: 309px;
+  }
+
+  @include vp-767 {
+    width: 270px;
+  }
+}
+
+.cruises__card-wrapper {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  padding: 34px 25px;
+  background-color: $color-default-black;
+}
+
+.cruises__card h3 {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  margin: 0;
+  padding: 35px 35px 30px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.cruises__card dl {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruises__card dd {
+  margin: 0 0 10px;
+  color: $color-alternat-white;
+
+  &:last-of-type {
+    margin: 0 0 20px;
+  }
+}
+
+.cruises__card a {
+  display: block;
+  padding: 10px;
+  width: 210px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  background-color: $color-default-white;
+  color: $color-default-black;
+}
