@@ -27,4 +27,12 @@
     font-size: 12px;
     line-height: 15px;
   }
+
+  &:hover {
+    color: darken($color-default-white, 9%);
+  }
+
+  &:active {
+    color: darken($color-default-white, 21%);
+  }
 }
