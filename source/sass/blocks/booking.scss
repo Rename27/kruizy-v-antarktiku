@@ -167,9 +167,10 @@
 .booking__form button {
   padding: 15px 0 17px;
   width: 100%;
-  font-family: $ff-placeholder;
   font-size: 14px;
   line-height: 21px;
+  font-weight: 600;
   color: $color-default-black;
+  background-color: $color-default-white;
   border: none;
 }
