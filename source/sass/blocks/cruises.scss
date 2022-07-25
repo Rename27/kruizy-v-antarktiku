@@ -55,7 +55,8 @@
 }
 
 .cruises__card li:hover .cruises__card-wrapper {
-  visibility: visible;
+  opacity: 1;
+  transition: opacity 200ms;
 }
 
 .cruises__card li:hover h3 {
@@ -80,7 +81,6 @@
 }
 
 .cruises__card-wrapper {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -88,6 +88,8 @@
   grid-row: 1/-1;
   padding: 34px 25px;
   background-color: $color-default-black;
+  opacity: 0;
+  transition: opacity 200ms;
 }
 
 .cruises__card h3 {
