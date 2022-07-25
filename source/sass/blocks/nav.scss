@@ -25,6 +25,7 @@
         background-color: $color-default-black;
         transform: rotate(45deg);
         content: "";
+        transition: all 300ms;
       }
 
       &::after {
@@ -43,6 +44,7 @@
         left: 0;
         background-color: $color-default-white;
         content: "";
+        transition: all 300ms, box-shadow 400ms;
       }
 
       &::after {
