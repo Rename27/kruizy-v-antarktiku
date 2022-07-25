@@ -1,9 +1,14 @@
 .social-network__list {
   display: flex;
-  gap: 25px;
+  gap: 24px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-1023 {
+    gap: 16px;
+    margin: 5px 0 0;
+  }
 }
 
 .social-network__link {
@@ -13,5 +18,12 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.social-network svg {
+  @include vp-1023 {
+    width: 17px;
+    height: 17px;
   }
 }

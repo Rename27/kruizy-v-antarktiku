@@ -34,13 +34,13 @@
 }
 
 .main-screen h1 {
-  margin: 175px 0 30px 95px;
+  margin: 156px 0 12px 95px;
   font-size: 54px;
   line-height: 66px;
   font-weight: 700;
 
   @include vp-1023 {
-    margin: 200px 0 30px;
+    margin: 214px 0 12px;
     font-size: 50px;
     line-height: 61px;
   }
@@ -53,12 +53,14 @@
 }
 
 .main-screen p {
-  margin: 0 0 235px 95px;
+  margin: 0 0 277px 95px;
   font-size: 20px;
   line-height: 24px;
 
   @include vp-1023 {
-    margin: 0 0 234px 0;
+    margin: 0 0 275px;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   @include vp-767 {

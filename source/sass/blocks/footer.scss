@@ -2,6 +2,10 @@
   padding: 50px 0;
   background-color: $color-default-black;
 
+  @include vp-1023 {
+    padding: 46px 0 50px;
+  }
+
   @include vp-767 {
     padding: 40px 0;
   }
