@@ -5,6 +5,10 @@
   background-size: cover;
   padding: 120px 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../../img/icebergs-advantages@2x.jpg");
+  }
+
   @include vp-1023 {
     padding: 90px 0 100px;
   }

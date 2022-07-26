@@ -134,7 +134,7 @@ const createWebp = () => {
 };
 
 const optimizeImages = () => {
-  return gulp.src('build/img/**/*.{png,jpg}')
+  return gulp.src('build/img/**/*.{jpg,png}')
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
