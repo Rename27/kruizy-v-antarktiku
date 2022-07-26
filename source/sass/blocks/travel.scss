@@ -12,8 +12,8 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 39px;
-    padding: 65px 0;
+    gap: 32px;
+    padding: 57px 0 65px;
     justify-items: center;
   }
 }
@@ -30,6 +30,11 @@
 
   @include vp-1023 {
     margin: 10px 0 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    height: 186px;
   }
 }
 

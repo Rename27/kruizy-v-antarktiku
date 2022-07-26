@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 65px 0;
+    padding: 55px 0 64px;
   }
 }
 
@@ -24,7 +24,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 40px;
+    margin: 0 0 32px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -46,6 +46,7 @@
 
   @include vp-767 {
     grid-template-columns: repeat(auto-fill, 270px);
+    row-gap: 30px;
   }
 }
 
@@ -69,6 +70,10 @@
 
   @include vp-1023 {
     padding: 27px 0 0 33px;
+  }
+
+  @include vp-767 {
+    padding: 28px 0 0 25px;
   }
 }
 
@@ -100,6 +105,10 @@
   @include vp-1023 {
     padding: 70px 35px 0 35px;
   }
+
+  @include vp-767 {
+    padding: 70px 25px 0;
+  }
 }
 
 .cruises__card h3 {
@@ -114,6 +123,10 @@
 
   @include vp-1023 {
     padding: 35px 0 27px 35px;
+  }
+
+  @include vp-767 {
+    padding: 35px 0 18px 25px;
   }
 }
 
@@ -135,7 +148,7 @@
 .cruises__card a {
   display: block;
   padding: 10px;
-  width: 210px;
+  width: 100%;
   height: 40px;
   font-size: 14px;
   line-height: 21px;

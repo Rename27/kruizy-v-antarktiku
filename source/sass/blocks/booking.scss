@@ -17,7 +17,7 @@
   }
 
   @include vp-767 {
-    padding: 65px 0;
+    padding: 60px 0 65px;
   }
 }
 
@@ -43,6 +43,7 @@
   }
 
   @include vp-767 {
+    margin: 0 0 13px;
     font-size: 24px;
     line-height: 31px;
   }
@@ -59,7 +60,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 40px;
+    margin: 0 0 34px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -83,7 +84,7 @@
   background-color: $color-default-black;
 
   @include vp-767 {
-    padding: 40px 30px;
+    padding: 31px 30px 40px;
   }
 }
 
@@ -96,6 +97,7 @@
 
   @include vp-767 {
     align-self: center;
+    margin: 0 0 27px;
     max-width: 214px;
     text-align: center;
   }
@@ -109,6 +111,10 @@
   margin: 0 0 29px;
   padding: 0;
   list-style-type: none;
+
+  @include vp-767 {
+    margin: 0 0 26px;
+  }
 }
 
 .booking__form label {
@@ -157,7 +163,7 @@
   }
 
   @include vp-767 {
-    margin: 0 8px 0 0;
+    margin: 0 13px 0 0;
     width: 20px;
     height: 20px;
   }
