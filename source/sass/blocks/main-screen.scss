@@ -9,7 +9,7 @@
     left: 0;
     width: auto;
     height: 650px;
-    background-image: url("../../img/icebergs-main-screen@1x.jpg");
+    background-image: url("../img/icebergs-main-screen@1x.jpg"), linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,7 @@
     content: "";
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/icebergs-main-screen@2x.jpg");
+      background-image: url("../img/icebergs-main-screen@2x.jpg"), linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9));
     }
   }
 

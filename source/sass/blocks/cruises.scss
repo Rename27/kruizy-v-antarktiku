@@ -54,26 +54,26 @@
   display: grid;
   width: fit-content;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
-}
 
-.cruises__card li:hover .cruises__card-wrapper {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-
-.cruises__card li:hover h3 {
-  grid-column: 1/1;
-  align-self: flex-start;
-  padding: 27px 0 0 25px;
-  grid-row: 1/1;
-  z-index: 1;
-
-  @include vp-1023 {
-    padding: 27px 0 0 33px;
+  &:hover .cruises__card-wrapper {
+    opacity: 1;
+    transition: opacity 200ms;
   }
 
-  @include vp-767 {
-    padding: 28px 0 0 25px;
+  &:hover h3 {
+    grid-column: 1/1;
+    align-self: flex-start;
+    padding: 27px 0 0 25px;
+    grid-row: 1/1;
+    z-index: 1;
+
+    @include vp-1023 {
+      padding: 27px 0 0 33px;
+    }
+
+    @include vp-767 {
+      padding: 28px 0 0 25px;
+    }
   }
 }
 

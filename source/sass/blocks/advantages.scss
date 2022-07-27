@@ -1,12 +1,12 @@
 .advantages {
-  background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../../img/icebergs-advantages@1x.jpg");
+  background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../img/icebergs-advantages@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 0;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../../img/icebergs-advantages@2x.jpg");
+    background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../img/icebergs-advantages@2x.jpg");
   }
 
   @include vp-1023 {
