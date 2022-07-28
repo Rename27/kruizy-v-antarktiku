@@ -149,6 +149,7 @@
   width: 18px;
   height: 18px;
   appearance: none;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -177,6 +178,7 @@
   font-size: 10px;
   line-height: 13px;
   color: $color-default-white;
+  cursor: pointer;
 
   @include vp-767 {
     line-height: 12px;
@@ -186,7 +188,7 @@
 .booking__form button {
   padding: 11px 0 17px;
   width: 100%;
-  height: 43px;
+  min-height: 43px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;

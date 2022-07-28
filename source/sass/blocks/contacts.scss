@@ -32,11 +32,13 @@
 .contacts__map noscript {
   grid-column: 1/1;
   grid-row: 1/1;
+  z-index: 1;
 }
 
 .contacts__map img {
+  width: 100%;
   height: 100%;
-  object-fit: none;
+  object-fit: cover;
 }
 
 .contacts__map iframe {
