@@ -1,25 +1,42 @@
-const navToggleButton = document.querySelector('.nav__toggle-button');
-const navMain = document.querySelector('.nav__list');
-const headerLogo = document.querySelector('.header__logo');
+const pageBody = document.querySelector('.page__body');
+const headerLogo = pageBody.querySelector('.header__logo');
+const navOverlay = pageBody.querySelector('.nav__overlay');
+const navToggleButton = pageBody.querySelector('.nav__toggle-button');
 
-navMain.classList.remove('nav__list--js-none');
-navMain.classList.add('nav__list--is-close');
-navMain.classList.remove('nav__list--is-open');
+const navLinks = pageBody.querySelectorAll('.nav__link');
+
+navOverlay.classList.remove('nav__overlay--jsnone');
+
+const openNavOverlay = () => {
+  navOverlay.classList.remove('nav__overlay--is-close');
+  navOverlay.classList.add('nav__overlay--is-open');
+  navToggleButton.classList.remove('nav__toggle-button--is-close');
+  navToggleButton.classList.add('nav__toggle-button--is-open');
+  headerLogo.style.visibility = 'hidden';
+  pageBody.style.overflowY = 'hidden';
+};
+
+const closeNavOverlay = () => {
+  navOverlay.classList.add('nav__overlay--is-close');
+  navOverlay.classList.remove('nav__overlay--is-open');
+  navToggleButton.classList.remove('nav__toggle-button--is-open');
+  navToggleButton.classList.add('nav__toggle-button--is-close');
+  headerLogo.style.visibility = 'visible';
+  pageBody.style.overflowY = 'scroll';
+};
 
 export const navToggle = () => {
   navToggleButton.addEventListener('click', function () {
-    if (navMain.classList.contains('nav__list--is-close')) {
-      navMain.classList.remove('nav__list--is-close');
-      navMain.classList.add('nav__list--is-open');
-      navToggleButton.classList.remove('nav__toggle-button--is-close');
-      navToggleButton.classList.add('nav__toggle-button--is-open');
-      headerLogo.style.visibility = 'hidden';
+    if (navToggleButton.classList.contains('nav__toggle-button--is-close')) {
+      openNavOverlay();
     } else {
-      navMain.classList.add('nav__list--is-close');
-      navMain.classList.remove('nav__list--is-open');
-      navToggleButton.classList.remove('nav__toggle-button--is-open');
-      navToggleButton.classList.add('nav__toggle-button--is-close');
-      headerLogo.style.visibility = 'visible';
+      closeNavOverlay();
     }
+
+    navLinks.forEach((navLink) => {
+      navLink.addEventListener('click', closeNavOverlay);
+    });
   });
 };
+
+

@@ -82,16 +82,17 @@
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
-  padding: 43px 50px 50px 50px;
+  padding: 43px 50px 43px;
   max-width: 403px;
   min-height: 455px;
   background-color: $color-default-black;
 
   @include vp-1023 {
-    padding: 31px 30px 40px;
+    padding: 44px 50px 44px;
   }
 
   @include vp-767 {
+    padding: 33px 30px;
     width: 100%;
     max-width: none;
   }

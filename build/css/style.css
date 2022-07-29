@@ -457,6 +457,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #f9fbfd;
+  overflow-x: hidden;
 }
 
 a {
@@ -645,7 +646,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1190px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -685,6 +686,24 @@ button,
   fill: #f9fbfd;
 }
 
+.nav__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__logo {
+  display: none;
+}
+
+.nav__logo:hover {
+  opacity: 0.8;
+}
+
+.nav__logo:active {
+  opacity: 0.5;
+}
+
 .nav__toggle-button {
   display: none;
 }
@@ -700,18 +719,6 @@ button,
   padding: 0;
   max-width: 800px;
   list-style-type: none;
-}
-
-.nav__logo {
-  display: none;
-}
-
-.nav__logo:hover {
-  opacity: 0.8;
-}
-
-.nav__logo:active {
-  opacity: 0.5;
 }
 
 .nav__logo svg {
@@ -865,11 +872,9 @@ button,
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, 260px);
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   list-style-type: none;
   color: #f9fbfd;
 }
@@ -1023,7 +1028,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   justify-items: flex-start;
-  padding: 43px 50px 50px 50px;
+  padding: 43px 50px 43px;
   max-width: 403px;
   min-height: 455px;
   background-color: #011c40;
@@ -1148,7 +1153,7 @@ button,
 .contacts__map {
   display: -ms-grid;
   display: grid;
-  max-height: 306px;
+  height: 306px;
 }
 
 .contacts__map noscript {
@@ -1177,7 +1182,7 @@ button,
 }
 
 .contacts__wrapper {
-  padding: 75px 0 78px 60px;
+  padding: 72px 0 55px 60px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -1262,7 +1267,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 10px 33px;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   max-width: 595px;
   list-style-type: none;
@@ -1289,7 +1294,7 @@ button,
   gap: 24px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   max-width: 112px;
   list-style-type: none;
@@ -1358,7 +1363,7 @@ button,
 
   .travel picture,
   .travel img {
-    margin: 10px 0 0;
+    margin: 5px 0 0;
   }
 
   .travel h2 {
@@ -1393,6 +1398,10 @@ button,
 
   .advantages__card h3 {
     line-height: 25px;
+  }
+
+  .advantages__card p br {
+    display: none;
   }
 
   .cruises {
@@ -1456,17 +1465,23 @@ button,
   }
 
   .booking__form {
-    padding: 31px 30px 40px;
+    padding: 44px 50px 44px;
   }
 
   .contacts {
     gap: 30px;
     padding-top: 100px;
-    padding-bottom: 130px;
+    padding-bottom: 100px;
+  }
+
+  .contacts__map {
+    grid-row: 2/-1;
+    width: 100%;
+    height: 335px;
   }
 
   .contacts__wrapper {
-    padding: 67px 0 0 5px;
+    padding: 64px 0 0 3px;
   }
 
   .contacts__wrapper h2 {
@@ -1482,6 +1497,7 @@ button,
   }
 
   .footer-nav__list {
+    margin: 0;
     gap: 10px 23px;
     max-width: 510px;
   }
@@ -1509,7 +1525,8 @@ button,
 
   .header {
     position: relative;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     -webkit-filter: none;
     filter: none;
   }
@@ -1517,6 +1534,90 @@ button,
   .logo svg {
     width: 42px;
     height: 22px;
+  }
+
+  .nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 35px;
+    right: 0;
+    background-color: #f9fbfd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 30px 0 15px;
+    max-width: initial;
+    height: 100%;
+    -webkit-transform: translateX(10000px);
+    -ms-transform: translateX(10000px);
+    transform: translateX(10000px);
+    -webkit-box-shadow: -20px 0 10px 20px rgba(0, 43, 102, 0.5);
+    box-shadow: -20px 0 10px 20px rgba(0, 43, 102, 0.5);
+    overflow-y: scroll;
+  }
+
+  .nav__overlay--is-open {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: -webkit-transform ease-out 300ms;
+    transition: -webkit-transform ease-out 300ms;
+    -o-transition: transform ease-out 300ms;
+    transition: transform ease-out 300ms;
+    transition: transform ease-out 300ms, -webkit-transform ease-out 300ms;
+  }
+
+  .nav__overlay--is-close {
+    -webkit-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    transform: translateX(1000px);
+    -webkit-transition: -webkit-transform ease-out 300ms;
+    transition: -webkit-transform ease-out 300ms;
+    -o-transition: transform ease-out 300ms;
+    transition: transform ease-out 300ms;
+    transition: transform ease-out 300ms, -webkit-transform ease-out 300ms;
+  }
+
+  .nav__overlay--jsnone {
+    position: absolute;
+    left: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 15px;
+    height: initial;
+    min-height: 165px;
+    background-color: #f9fbfd;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .nav__overlay--jsnone .nav__list {
+    max-height: 126px;
+  }
+
+  .nav__overlay--jsnone .nav__link {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .nav__logo {
+    display: block;
+    width: 44px;
+    height: 22px;
+    margin-bottom: 24px;
   }
 
   .nav__toggle-button {
@@ -1581,34 +1682,11 @@ button,
     box-shadow: 0 -6px 0 #f9fbfd;
   }
 
-  .nav__list--js-none,
-  .nav__list--is-open {
-    position: absolute;
-    top: 0;
-    left: 35px;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 20px 30px 0 15px;
-    max-width: initial;
-    height: 568px;
-    background-color: #f9fbfd;
-  }
-
-  .nav__list--is-close {
-    display: none;
-  }
-
-  .nav__logo {
-    display: block;
-    width: 44px;
-    height: 22px;
-    margin-bottom: 33px;
   }
 
   .nav__link {
@@ -1698,7 +1776,7 @@ button,
   }
 
   .advantages__card li {
-    padding: 21px 15px 21px 20px;
+    padding: 22px 15px 20px;
   }
 
   .advantages__card svg {
@@ -1723,6 +1801,7 @@ button,
 
   .cruises__card ul {
     grid-template-columns: repeat(auto-fill, 270px);
+    padding: 0 8px;
   }
 
   .cruises__card picture,
@@ -1759,6 +1838,7 @@ button,
   }
 
   .booking__form {
+    padding: 33px 30px;
     width: 100%;
     max-width: none;
   }
@@ -1798,13 +1878,7 @@ button,
   }
 
   .contacts__map {
-    grid-row: 2/-1;
-    width: 100%;
-    max-height: 335px;
-  }
-
-  .contacts__map {
-    max-height: 316px;
+    height: 316px;
   }
 
   .contacts__wrapper {
