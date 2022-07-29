@@ -24,6 +24,7 @@
   }
 }
 
+.travel picture,
 .travel img {
   object-fit: cover;
   height: 100%;
@@ -33,8 +34,10 @@
   }
 
   @include vp-767 {
+    align-self: center;
+    width: 100%;
     margin: 0;
-    height: 186px;
+    min-height: 186px;
   }
 }
 

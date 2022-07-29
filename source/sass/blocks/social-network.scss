@@ -1,8 +1,10 @@
 .social-network__list {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  max-width: 112px;
   list-style-type: none;
 
   @include vp-1023 {

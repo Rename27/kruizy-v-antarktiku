@@ -87,8 +87,13 @@
   min-height: 455px;
   background-color: $color-default-black;
 
-  @include vp-767 {
+  @include vp-1023 {
     padding: 31px 30px 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -160,7 +165,7 @@
   }
 
   &:checked::after {
-    background: url("../../img/svg/check-mark.svg") no-repeat center;
+    background: url("../img/svg/check-mark.svg") no-repeat center;
     position: absolute;
     width: 18px;
     height: 18px;
