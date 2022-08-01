@@ -57,7 +57,8 @@
   overflow-x: scroll;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 
-  &:hover .cruises__card-wrapper {
+  &:hover .cruises__card-wrapper,
+  &:focus-within .cruises__card-wrapper {
     opacity: 1;
     transition: opacity 200ms;
 
@@ -69,9 +70,6 @@
     }
   }
 
-  &:focus-within .cruises__card-wrapper {
-    opacity: 1;
-  }
 
   &:hover h3 {
     display: none;
@@ -109,7 +107,6 @@
     width: 0;
     height: 0;
   }
-
 
   @include vp-1023 {
     padding: 28px 35px;

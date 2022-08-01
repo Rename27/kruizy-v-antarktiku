@@ -894,23 +894,21 @@ button,
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 }
 
-.cruises__card li:hover .cruises__card-wrapper {
+.cruises__card li:hover .cruises__card-wrapper,
+.cruises__card li:focus-within .cruises__card-wrapper {
   opacity: 1;
   -webkit-transition: opacity 200ms;
   -o-transition: opacity 200ms;
   transition: opacity 200ms;
 }
 
-.cruises__card li:hover .cruises__card-wrapper h3 {
+.cruises__card li:hover .cruises__card-wrapper h3,
+.cruises__card li:focus-within .cruises__card-wrapper h3 {
   display: block;
   -ms-flex-item-align: start;
   align-self: flex-start;
   margin: 0 0 15px;
   padding: 0;
-}
-
-.cruises__card li:focus-within .cruises__card-wrapper {
-  opacity: 1;
 }
 
 .cruises__card li:hover h3 {
