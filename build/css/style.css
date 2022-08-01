@@ -704,6 +704,10 @@ button,
   opacity: 0.5;
 }
 
+.nav__logo svg {
+  fill: #011c40;
+}
+
 .nav__toggle-button {
   display: none;
 }
@@ -719,10 +723,6 @@ button,
   padding: 0;
   max-width: 800px;
   list-style-type: none;
-}
-
-.nav__logo svg {
-  fill: #011c40;
 }
 
 .nav__link {
@@ -872,6 +872,9 @@ button,
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, 260px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 30px;
   margin: 0;
   padding: 0 15px;
@@ -886,6 +889,7 @@ button,
   width: -moz-fit-content;
   width: fit-content;
   max-height: 386px;
+  overflow-x: scroll;
   -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 }
@@ -933,12 +937,15 @@ button,
   grid-column: 1/-1;
   grid-row: 1/-1;
   padding: 29px 25px;
+  scrollbar-width: none;
   overflow-x: scroll;
   background-color: #011c40;
   opacity: 0;
-  -webkit-transition: opacity 200ms;
-  -o-transition: opacity 200ms;
-  transition: opacity 200ms;
+}
+
+.cruises__card-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .cruises__card h3 {
@@ -1053,10 +1060,17 @@ button,
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  gap: 22px;
   margin: 0 0 29px;
   padding: 0;
   list-style-type: none;
+}
+
+.booking__form li {
+  margin-bottom: 20px;
+}
+
+.booking__form li:last-child {
+  margin: 0;
 }
 
 .booking__form label {
@@ -1204,15 +1218,18 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin: 0 0 23px;
 }
 
 .contacts__wrapper li:last-child {
   margin: 0;
+}
+
+.contacts__wrapper svg {
+  margin-right: 10px;
 }
 
 .contacts__wrapper address {
@@ -1227,7 +1244,6 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 10px;
-  margin: 0 0 23px;
 }
 
 .contacts__wrapper a:hover {
@@ -1291,13 +1307,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 10px 0;
   padding: 0;
   max-width: 112px;
   list-style-type: none;
+}
+
+.social-network__item {
+  margin-right: 16px;
 }
 
 .social-network__link:hover {
@@ -1508,8 +1527,11 @@ button,
   }
 
   .social-network__list {
-    gap: 16px;
     margin: 5px 0 0;
+  }
+
+  .social-network__item {
+    margin-right: 16px;
   }
 
   .social-network svg {
@@ -1617,7 +1639,7 @@ button,
     display: block;
     width: 44px;
     height: 22px;
-    margin-bottom: 24px;
+    margin-bottom: 42px;
   }
 
   .nav__toggle-button {
@@ -1687,6 +1709,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    row-gap: 26px;
   }
 
   .nav__link {

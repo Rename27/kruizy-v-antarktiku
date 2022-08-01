@@ -1,6 +1,5 @@
 .social-network__list {
   display: flex;
-  gap: 24px;
   flex-wrap: wrap;
   margin: 10px 0;
   padding: 0;
@@ -8,8 +7,15 @@
   list-style-type: none;
 
   @include vp-1023 {
-    gap: 16px;
     margin: 5px 0 0;
+  }
+}
+
+.social-network__item {
+  margin-right: 16px;
+
+  @include vp-1023 {
+    margin-right: 16px;
   }
 }
 

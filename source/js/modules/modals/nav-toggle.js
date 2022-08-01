@@ -36,6 +36,8 @@ export const navToggle = () => {
     navLinks.forEach((navLink) => {
       navLink.addEventListener('click', closeNavOverlay);
     });
+
+    navOverlay.addEventListener('click', closeNavOverlay);
   });
 };
 

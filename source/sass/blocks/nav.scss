@@ -58,7 +58,7 @@
     display: block;
     width: 44px;
     height: 22px;
-    margin-bottom: 24px;
+    margin-bottom: 42px;
   }
 
   &:hover {
@@ -68,6 +68,10 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.nav__logo svg {
+  fill: $color-default-black;
 }
 
 .nav__toggle-button {
@@ -143,12 +147,10 @@
 
   @include vp-767 {
     flex-direction: column;
+    row-gap: 26px;
   }
 }
 
-.nav__logo svg {
-  fill: $color-default-black;
-}
 
 .nav__link {
   font-weight: 500;
