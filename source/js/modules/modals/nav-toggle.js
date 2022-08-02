@@ -1,4 +1,5 @@
 const pageBody = document.querySelector('.page__body');
+const pageMain = pageBody.querySelector('.main');
 const headerLogo = pageBody.querySelector('.header__logo');
 const navOverlay = pageBody.querySelector('.nav__overlay');
 const navToggleButton = pageBody.querySelector('.nav__toggle-button');
@@ -29,6 +30,7 @@ export const navToggle = () => {
   navToggleButton.addEventListener('click', function () {
     if (navToggleButton.classList.contains('nav__toggle-button--is-close')) {
       openNavOverlay();
+      pageMain.addEventListener('click', closeNavOverlay);
     } else {
       closeNavOverlay();
     }
@@ -36,9 +38,5 @@ export const navToggle = () => {
     navLinks.forEach((navLink) => {
       navLink.addEventListener('click', closeNavOverlay);
     });
-
-    navOverlay.addEventListener('click', closeNavOverlay);
   });
 };
-
-
