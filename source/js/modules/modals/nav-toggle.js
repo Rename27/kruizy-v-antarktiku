@@ -4,7 +4,7 @@ const headerLogo = pageBody.querySelector('.header__logo');
 const navOverlay = pageBody.querySelector('.nav__overlay');
 const navToggleButton = pageBody.querySelector('.nav__toggle-button');
 
-const navLinks = pageBody.querySelectorAll('.nav__link');
+const navLinks = pageBody.querySelectorAll('.nav__overlay a');
 
 navOverlay.classList.remove('nav__overlay--jsnone');
 
