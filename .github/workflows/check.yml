@@ -22,7 +22,3 @@ jobs:
     - name: Install dependencies
       run: |
         npm i
-
-    - name: Run checks
-      run: |
-        npm t
