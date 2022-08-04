@@ -24,7 +24,7 @@ jobs:
         run: npm i
 
       - name: Building
-        run: npm run build && npm start
+        run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
