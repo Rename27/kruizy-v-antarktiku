@@ -1,0 +1,112 @@
+.advantages {
+  background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../img/icebergs-advantages@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(227, 236, 246, 0.9), rgba(227, 236, 246, 0.9)), url("../img/icebergs-advantages@2x.jpg");
+  }
+
+  @include vp-1023 {
+    padding: 90px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 57px 0 70px;
+  }
+}
+
+.advantages h1 {
+  margin: 0 0 59px;
+  font-size: 28px;
+  line-height: 23px;
+  font-weight: 600;
+  text-align: center;
+
+  @include vp-1023 {
+    margin: 0 0 50px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 30px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.advantages__card ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: none;
+    gap: 30px;
+  }
+}
+
+.advantages__card li {
+  padding: 30px 30px 25px 30px;
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 24px 5px 20px 23px;
+  }
+
+  @include vp-767 {
+    padding: 22px 15px 20px;
+  }
+}
+
+.advantages__card svg {
+  margin: 0 0 10px;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 30px;
+  }
+
+  @include vp-767 {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.advantages__card h3 {
+  margin: 0 0 9px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+
+  @include vp-1023 {
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 7px;
+    max-width: 200px;
+  }
+}
+
+.advantages__card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include vp-1023 {
+    & br {
+      display: none;
+    }
+  }
+}
