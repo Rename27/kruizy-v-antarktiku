@@ -1,4 +1,4 @@
---- https://rename27.github.io/kruizy-v-antarktiku/ ---
+--- https://rinat-alimov.github.io/kruizy-v-antarktiku/ ---
 
 ## Краткая инструкция по работе
 Для начала работы у вас должент быть установлен **Node.js**
